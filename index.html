@@ -1,0 +1,67 @@
+<!DOCTYPE HTML> 
+<!--
+Description: HTML, Lissajous-Figuren
+Author: Regina Leone
+Version: 1.0
+Tags:
+-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Lissajous-Figuren</title>
+		
+		<!-- Einbinden Stylesheet -->
+		<link href= "css/style.css" rel = "stylesheet">
+		
+		<!-- Einbinden jQuery -->
+		<script src = "js/jquery-2.1.4.min.js"></script>
+	</head>
+	<body>
+	<div class="wrapper">
+		<header>
+			<h1>L I S S A J O U S - F I G U R E N</h1>
+		</header>
+	
+		<div id="main">
+			<div id="svgContainer" class="greenBackground">	
+				<svg id ="svg"></svg>
+			</div>
+			
+			<div class="buttonGroup">
+				<button id="start">Start</button><!-- Start der Animation -->
+				<button id="stop">Stop</button><!-- Stop der Animation -->
+				<button id="clear">Clear</button><!-- Löschen der aktuellen Animation -->
+				<button id="more">More</button><!-- Mehrere Lissajous-Figuren werden gleichzeitg angezeigt -->
+				<button id="funky">Funky !</button><!-- Animation mit Farbe -->
+			</div>	
+			<div class="reglerContainer"><!-- gruppierung der regler für frequenz -->
+				<div class="reglerGroup">
+					<input type="range" min="0" max="10" step="1" id="fx_regler" value="2" class="regler">
+					<label>Frequenz x</label>
+					<span id="fx_anzeige" class="werte"></span><!-- Einblenden der eigestellten Werte -->
+				</div>
+				<div class="reglerGroup">
+					<input type = "range" min = "0" max = "10" step = "1" id = "fy_regler" value = "3" class="regler">
+					<label>Frequenz y</label>
+					<span id="fy_anzeige" class="werte"></span><!-- Einblenden der eigestellten Werte -->
+				</div>
+			</div>
+			<div class="reglerContainer"><!-- gruppierung der regler für amplitude -->	
+				<div class="reglerGroup">
+					<input type = "range" min = "0" max = "470" step = "1" id = "ax_regler" value = "100" class="regler">
+					<label>Amplitude x</label>
+					<span id="ax_anzeige" class="werte"></span><!-- Einblenden der eigestellten Werte -->
+				</div>
+				<div class="reglerGroup">
+					<input type = "range" min = "0" max = "220" step = "1" id = "ay_regler" value = "100" class="regler">
+					<label>Amplitude y</label>
+					<span id="ay_anzeige" class="werte"></span><!-- Einblenden der eigestellten Werte -->
+				</div>
+			</div>
+		</div>	
+		<!-- Einbinden der JavaScript-Datei -->
+		<script src = "js/main_dyn.js"></script>
+	</div>
+	<footer></footer><!-- Sticky Footer -->	
+	</body>
+</html>
